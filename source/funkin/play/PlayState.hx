@@ -2135,8 +2135,6 @@ class PlayState extends MusicBeatSubState
 
     var timeToPlayAt:Float = Math.min(FlxG.sound.music.length, Math.max(0, Conductor.instance.songPosition - Conductor.instance.combinedOffset));
     trace('Resyncing vocals to ${timeToPlayAt}');
-    FlxG.sound.music.pause();
-    vocals.pause();
 
     FlxG.sound.music.time = timeToPlayAt;
     FlxG.sound.music.play(false, timeToPlayAt);
